@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; 
+            color: #c9d1d9;
+        }
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        body {
+            -ms-overflow-style: none; 
+            scrollbar-width: none; 
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900 bg-opacity-80 backdrop-blur-sm shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-center items-center">
+            <ul class="flex space-x-6 sm:space-x-12">
+                <li><a href="#projects" class="text-white hover:text-sky-400 transition-colors duration-300 font-medium">Projects</a></li>
+                <li><a href="#skills" class="text-white hover:text-sky-400 transition-colors duration-300 font-medium">Skills</a></li>
+                <li><a href="#certifications" class="text-white hover:text-sky-400 transition-colors duration-300 font-medium">Certifications</a></li>
+                <li><a href="#contact" class="text-white hover:text-sky-400 transition-colors duration-300 font-medium">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="min-h-screen flex flex-col items-center">
+        <header class="w-full relative h-screen flex flex-col md:flex-row justify-between items-center p-8 text-center md:text-left md:space-x-12">
+    <div class="z-10 flex flex-col items-center md:items-start max-w-xl">
+        <h1 class="text-5xl sm:text-7xl font-extrabold mb-6 text-white drop-shadow-lg">
+            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-sky-500">Charan</span>
+        </h1>
+        <p class="text-xl sm:text-2xl mb-10">
+            A motivated BTech student passionate about problem-solving, data structures, algorithms, and web development. Welcome to my portfolio!
+
+        </p>
+        <a href="#projects" class="bg-gradient-to-r from-teal-500 to-sky-500 hover:scale-110 transition-transform duration-300 text-white font-semibold py-4 px-10 rounded-full shadow-lg text-lg">
+            Explore My Work
+        </a>
+    </div>
+    <img src="Charan.png" 
+     alt="Your Photo" 
+
+     class="w-56 h-56 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full mt-10 md:mt-0 z-10 shadow-2xl">
+    <div class="w-full h-full absolute inset-0 z-0">
+        <canvas id="hero-canvas"></canvas>
+    </div>
+</header>
+
+       <section id="projects" class="w-full max-w-5xl px-4 py-20 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700 transition-all hover:scale-105 duration-300">
+                    <h3 class="text-xl font-semibold mb-2 text-white">Number Game</h3>
+                    <p class="text-slate-400 mb-4">
+                        A dynamic arithmetic game using HTML, CSS, and JavaScript with timed challenges, countdown timer, input validation, and a responsive interface.
+                    </p>
+                    <a href="https://charan2066.github.io/Number_game/" target="_blank" class="inline-block bg-teal-500 text-white font-medium py-2 px-4 rounded-full text-sm hover:bg-teal-600">View Project</a>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="bg-yellow-600 text-white text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+                        <span class="bg-orange-600 text-white text-xs font-medium px-2 py-1 rounded-full">HTML</span>
+                        <span class="bg-blue-600 text-white text-xs font-medium px-2 py-1 rounded-full">CSS</span>
+                    </div>
+
+                </div>
+                <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700 transition-all hover:scale-105 duration-300">
+                    <h3 class="text-xl font-semibold mb-2 text-white">College Sports Hub Website</h3>
+                    <p class="text-slate-400 mb-4">
+                        A web platform to manage sports registrations, event notifications, and live scores with a user-friendly design and real-time accessibility.
+                    </p>
+                    <a href="https://charan2066.github.io/Sports_Projects_Hub/" target="_blank" class="inline-block bg-sky-500 text-white font-medium py-2 px-4 rounded-full text-sm hover:bg-sky-600">View Project</a>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="bg-orange-600 text-white text-xs font-medium px-2 py-1 rounded-full">HTML</span>
+                        <span class="bg-blue-600 text-white text-xs font-medium px-2 py-1 rounded-full">CSS</span>
+                        <span class="bg-yellow-600 text-white text-xs font-medium px-2 py-1 rounded-full">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section id="skills" class="w-full max-w-5xl px-4 py-20 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">My Skills</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700">
+            <h3 class="text-xl font-semibold mb-4 text-white">Programming Languages</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-blue-600 text-white px-4 py-2 rounded-full font-medium shadow">C</span>
+                <span class="bg-blue-600 text-white px-4 py-2 rounded-full font-medium shadow">C++</span>
+                <span class="bg-blue-600 text-white px-4 py-2 rounded-full font-medium shadow">Java</span>
+                <span class="bg-blue-600 text-white px-4 py-2 rounded-full font-medium shadow">Python</span>
+                <span class="bg-blue-600 text-white px-4 py-2 rounded-full font-medium shadow">JavaScript</span>
+            </div>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700">
+            <h3 class="text-xl font-semibold mb-4 text-white">Web Development</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-green-600 text-white px-4 py-2 rounded-full font-medium shadow">HTML</span>
+                <span class="bg-green-600 text-white px-4 py-2 rounded-full font-medium shadow">CSS</span>
+            </div>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700">
+            <h3 class="text-xl font-semibold mb-4 text-white">Database</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-yellow-600 text-white px-4 py-2 rounded-full font-medium shadow">SQL</span>
+            </div>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700">
+            <h3 class="text-xl font-semibold mb-4 text-white">Operating Systems</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium shadow">Linux</span>
+                <span class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium shadow">Windows</span>
+                <span class="bg-indigo-600 text-white px-4 py-2 rounded-full font-medium shadow">Basic OS Concepts</span>
+            </div>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700">
+            <h3 class="text-xl font-semibold mb-4 text-white">Tools & Platforms</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-pink-600 text-white px-4 py-2 rounded-full font-medium shadow">Git</span>
+                <span class="bg-pink-600 text-white px-4 py-2 rounded-full font-medium shadow">VS Code</span>
+            </div>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700">
+            <h3 class="text-xl font-semibold mb-4 text-white">Competencies</h3>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-red-600 text-white px-4 py-2 rounded-full font-medium shadow">Competitive Coding</span>
+                <span class="bg-red-600 text-white px-4 py-2 rounded-full font-medium shadow">Data Structures & Algorithms</span>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="certifications" class="w-full max-w-5xl px-4 py-20 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out">
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Certifications</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700 hover:scale-105 transition-all duration-300">
+            <h3 class="text-xl font-semibold mb-2 text-white">Cisco Networking Academy</h3>
+            <p class="text-slate-400 mb-4">Certified in <strong>C Programming</strong>.</p>
+            <a href="https://drive.google.com/file/d/14zKR01EcA89QKTnw7bzZuRPGVANOkIgM/view?usp=drive_link" target="_blank" class="inline-block bg-teal-500 text-white font-medium py-2 px-4 rounded-full text-sm hover:bg-teal-600">View Credential</a>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700 hover:scale-105 transition-all duration-300">
+            <h3 class="text-xl font-semibold mb-2 text-white">Cisco Networking Academy</h3>
+            <p class="text-slate-400 mb-4">Certified in <strong>C++ Programming</strong>.</p>
+            <a href="https://drive.google.com/file/d/1Ow5RHTdYTjUcs9pc8RzZIS9txWU6PWhv/view?usp=drive_link" target="_blank" class="inline-block bg-teal-500 text-white font-medium py-2 px-4 rounded-full text-sm hover:bg-teal-600">View Credential</a>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700 hover:scale-105 transition-all duration-300">
+            <h3 class="text-xl font-semibold mb-2 text-white">Cisco Networking Academy</h3>
+            <p class="text-slate-400 mb-4">Certified in <strong>Python Programming</strong>.</p>
+            <a href="https://drive.google.com/file/d/1cnJ2UrLjLar6iFB2MT3gTUn4pl2tGLKJ/view?usp=drive_link" target="_blank" class="inline-block bg-teal-500 text-white font-medium py-2 px-4 rounded-full text-sm hover:bg-teal-600">View Credential</a>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700 hover:scale-105 transition-all duration-300">
+            <h3 class="text-xl font-semibold mb-2 text-white">Cisco Networking Academy</h3>
+            <p class="text-slate-400 mb-4">Certified in <strong>Operating Systems</strong>.</p>
+            <a href="https://drive.google.com/file/d/1lHs06I4VLUkz-ybCxWdkS3jOlZmnA5Jw/view?usp=drive_link" target="_blank" class="inline-block bg-teal-500 text-white font-medium py-2 px-4 rounded-full text-sm hover:bg-teal-600">View Credential</a>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700 hover:scale-105 transition-all duration-300">
+            <h3 class="text-xl font-semibold mb-2 text-white">Oracle</h3>
+            <p class="text-slate-400 mb-4">Certified in <strong>Java</strong>.</p>
+            <a href="https://drive.google.com/file/d/1Zry-Qbk4jaVwdaLV8hAKq3V-jmQfE0GL/view?usp=drive_link" target="_blank" class="inline-block bg-sky-500 text-white font-medium py-2 px-4 rounded-full text-sm hover:bg-sky-600">View Credential</a>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700 hover:scale-105 transition-all duration-300">
+            <h3 class="text-xl font-semibold mb-2 text-white">IT Specialist</h3>
+            <p class="text-slate-400 mb-4">Certified in <strong>HTML</strong> and <strong>CSS</strong>.</p>
+            <a href="https://drive.google.com/file/d/1J02r9jrfkeO4AlFvqQhTi1W3Jk1cT0bO/view?usp=drive_link" target="_blank" class="inline-block bg-orange-500 text-white font-medium py-2 px-4 rounded-full text-sm hover:bg-orange-600">View Credential</a>
+        </div>
+        <div class="bg-slate-800 p-6 rounded-3xl shadow-lg border border-slate-700 hover:scale-105 transition-all duration-300">
+            <h3 class="text-xl font-semibold mb-2 text-white">NPTEL</h3>
+            <p class="text-slate-400 mb-4">Certified in <strong>Cloud Computing</strong>.</p>
+            <a href="https://drive.google.com/file/d/1lHs06I4VLUkz-ybCxWdkS3jOlZmnA5Jw/view?usp=drive_link" target="_blank" class="inline-block bg-purple-500 text-white font-medium py-2 px-4 rounded-full text-sm hover:bg-purple-600">View Credential</a>
+        </div>
+
+    </div>
+</section>
+        <section id="contact" class="w-full max-w-3xl px-4 py-20 opacity-0 transform translate-y-10 transition-all duration-1000 ease-out">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-white">Get In Touch</h2>
+            <div class="bg-slate-800 p-8 rounded-3xl shadow-lg border border-slate-700">
+                <p class="text-center mb-6 text-slate-300">
+                    I'm always open to new opportunities and collaborations. Feel free to reach out!
+                </p>
+                <div class="flex justify-center items-center gap-6 flex-wrap">
+                    <a href="mailto:balanagucharan@gmail.com" class="flex flex-col items-center hover:scale-110 transition-transform duration-300 text-slate-400 hover:text-white">
+                        <i class="fas fa-envelope text-2xl mb-2"></i>
+                        <span class="text-sm">Email</span>
+                    </a>
+                    <a href="tel:+919701523385" class="flex flex-col items-center hover:scale-110 transition-transform duration-300 text-slate-400 hover:text-white">
+                        <i class="fas fa-phone-alt text-2xl mb-2"></i>
+                        <span class="text-sm">Phone</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/charan-balanagu-7a1927290/" class="flex flex-col items-center hover:scale-110 transition-transform duration-300 text-slate-400 hover:text-white">
+                        <i class="fab fa-linkedin text-2xl mb-2"></i>
+                        <span class="text-sm">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/CHARAN2066" class="flex flex-col items-center hover:scale-110 transition-transform duration-300 text-slate-400 hover:text-white">
+                        <i class="fab fa-github text-2xl mb-2"></i>
+                        <span class="text-sm">GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <footer class="w-full text-center py-8 text-sm text-slate-500">
+            <p>&copy; 2024 Alex Doe. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
